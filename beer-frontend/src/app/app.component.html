@@ -1,0 +1,38 @@
+<header>
+  <h1>Beer universe</h1>
+</header>
+<main class="main">
+  <div class="content">
+    <div class="card"> 
+      <p-dataView
+        #dv 
+        [value]="beers" 
+        [paginator]="true" 
+        [rows]="3" 
+        filterBy="name"
+        layout="grid"> 
+        <ng-template let-beers pTemplate="gridItem"> 
+          <p-card header="{{ beer.name }}" *ngFor="let beer of beers; let first = first">
+            <p class="m-0">
+              <span *ngIf="beer.countryCode">Loved in  {{ beer.countryCode | countryNamePipe | async }}</span><br><br> <!-- TODO: improve layout -->
+              <p-button icon="pi pi-question-circle" class="flex-auto md:flex-initial white-space-nowrap detail-button" severity="secondary" 
+              label="Details" (onClick)="onDetailsClick(beer)"/>
+            </p>
+          </p-card>
+        </ng-template> 
+      </p-dataView> 
+    </div>
+
+  </div>
+</main>
+
+<p-dialog header="{{'Infos ' + currentBeer?.name }}" [modal]="true" [(visible)]="visible" [style]="{ width: '40%' }">
+  <div class="info">
+    <span class="p-text-secondary">Some information...</span>
+  </div>
+  <div class="flex justify-content-end gap-2">
+      <p-button label="Close" severity="secondary" (onClick)="visible = false; currentBeer = undefined;" />
+  </div>
+</p-dialog>
+
+<router-outlet></router-outlet>

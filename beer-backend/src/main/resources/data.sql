@@ -1,0 +1,16 @@
+INSERT INTO beer (id, name, brewery_name, country_code) VALUES
+    (1, 'Corona', 'Cerveceria Modelo S.A.', 'MX'),
+    (2, 'Appenzeller Quöllfrisch hell', 'Brauerei Locher AG', 'CH'),
+    (3, 'Cardinal draft', 'Feldschlösschen Getränke AG', 'CH'),
+    (4, 'Profanity Stout', 'Williams Bros. Brewing Co.', 'GB'),
+    (5, 'Yardbird Pale Ale', 'Greene King', 'GB'),
+    (6, 'Nanny State', 'BrewDog plc', 'GB'),
+    (7, 'Feierobed-Bier', 'Engelbräu Rettenberg Hermann Widenmayer KG', 'DE'),
+    (8, 'Kellerbier', 'Keiler-Bier GmbH', 'DE'),
+    (9, 'Sagres', 'SCC-Sociedade Central de Cervejas e Bebidas, S.A.', 'PT'),
+    (10, 'Mountainbikerin', 'Craftbeer Lodge', 'DE'),
+    (11, 'People Money Space Time', 'Verdant Brewing Co.', 'GB'),
+    (12, 'Superfreunde - Hell', 'Superfreunde GmbH & Co. KG', 'DE'),
+    (13, 'Monsteiner - Huus Bier', 'BierVision Monstein AG', 'CH'),
+    (14, 'Pumpkin Ale', 'Brauhuus 531 GmbH', 'CH'),
+    (15, 'Moosehead - Alpine', 'Moosehead Breweries Limited', 'CA');
